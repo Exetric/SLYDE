@@ -1,0 +1,68 @@
+.logo {
+  width: 250px;
+}
+body {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32px;
+}
+header {
+  width: 100%;
+  background-color: white;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  box-shadow: 0px 25px 25px rgba(0,0,0,0.1);
+  padding: 20px 0px 20px 0px;
+}
+footer {
+  width: 100%;
+  background-color: white;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  box-shadow: 0px -25px 25px rgba(0,0,0,0.1);
+  padding: 20px 0px 20px 0px;
+}
+button {
+  font-size: 36px;
+  padding: 40px 160px 40px 160px;
+  border-radius: 1000px;
+  border-style: none;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #ED6723;
+  color: white;
+}
+.main {
+  position: absolute;
+  font-size: 60px;
+  margin: auto;
+  text-align: center;
+  margin-top: 50%;
+  left: 0px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px;
+}
+input {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 48px;
+  padding: 24px;
+  border-style: none;
+  border-radius: 1000px;
+  width: 85%;
+  outline-style: none;
+  text-align: center;
+  background-color: #F5F5F5;
+}
+input:focus {
+  background-color: #F0F0F0;
+}
+.bmf {
+  width: 80%;
+  position: absolute;
+  bottom: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
