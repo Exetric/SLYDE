@@ -43,6 +43,7 @@ button {
   width: 100%;
   box-sizing: border-box;
   padding: 15px;
+  background-color: white;
 }
 input {
   font-family: 'Montserrat', sans-serif;
