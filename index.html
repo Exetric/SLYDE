@@ -14,12 +14,13 @@
       <img src="assets/logo.svg" class="logo" alt="SLIDE">
     </header>
     <div class="main">
-      <img src="assets/bitmoji.png" alt="bitmoji">
-      <h2>Ethan Hazel</h2>
+      <img id="bitmoji" src="assets/bitmoji.png" alt="bitmoji">
+      <h2 id="name">Ethan Hazel</h2>
+      <p id="sendText">Message has been sent!</p>
       <input type="text" id="inputOne" name="inputOne" maxlength="200" placeholder="Enter message">
     </div>
     <footer>
-      <button type="button" onclick="sendMessage();" name="sumbit">S E N D</button>
+      <button id="sendButton" type="button" onclick="sendMessage();" name="sumbit">S E N D</button>
     </footer>
     <img src="assets/bitmojifooter.png" alt="bitmoji footer" class="bmf">
     <script type="text/javascript">
@@ -35,7 +36,11 @@
         }
 
         request.send(JSON.stringify(params));
-        document.getElementById('inputOne').visibility = hidden;
+        document.getElementById('bitmoji').src = 'assets/sent.png';
+        document.getElementById('inputOne').style.display = 'none';
+        document.getElementById('sendButton').style.visibility = 'hidden';
+        document.getElementById('name').style.display = 'none';
+        document.getElementById('sendText').style.display = 'block';
       }
     </script>
   </body>
