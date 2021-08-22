@@ -30,7 +30,7 @@ button {
   border-radius: 1000px;
   border-style: none;
   font-family: 'Montserrat', sans-serif;
-  background-color: #ED6723;
+  background-color: #F15A29;
   color: white;
 }
 button:active {
@@ -74,4 +74,14 @@ p {
   opacity: 50%;
   font-size: 48px;
   display: none;
+}
+.notNormal {
+  display: none;
+}
+.spookyImage {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
 }
