@@ -9,39 +9,48 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
   </head>
-  <body>
+  <body onclick="fuckYou()">
     <header>
       <img src="assets/logo.svg" class="logo" alt="SLIDE">
     </header>
-    <div class="main">
-      <img id="bitmoji" src="assets/bitmoji.png" alt="bitmoji">
-      <h2 id="name">Ethan Hazel</h2>
-      <p id="sendText">Message has been sent!</p>
-      <input type="text" id="inputOne" name="inputOne" maxlength="200" placeholder="Enter message">
+    <div class="normal">
+      <div class="main">
+        <img id="bitmoji" src="assets/bitmoji.png" alt="bitmoji">
+        <h2 id="name">Ethan Hazel</h2>
+        <input type="text" id="inputOne" name="inputOne" maxlength="200" placeholder="Enter message">
+      </div>
+      <footer>
+        <button id="sendButton" type="button" name="sumbit">S E N D</button>
+      </footer>
+      <img src="assets/bitmojifooter.png" alt="bitmoji footer" class="bmf">
     </div>
-    <footer>
-      <button id="sendButton" type="button" onclick="sendMessage();" name="sumbit">S E N D</button>
-    </footer>
-    <img src="assets/bitmojifooter.png" alt="bitmoji footer" class="bmf">
+    <div id="thingy" class="notNormal">
+      <img id="spookyImage" src="assets/coolImage.jpg" class="spookyImage" alt="spooky:O">
+    </div>
     <script type="text/javascript">
-      function sendMessage() {
-        var request = new XMLHttpRequest();
-        request.open("POST", "https://canary.discord.com/api/webhooks/868964396217544724/ZoQvwrNbkiAAUdU1M4iUc5ZMjdUL54GfoOJVlvMcC54pqz7wyxOksEXjdTvJyL4YYLJ6");
+    var blink = false;
 
-        request.setRequestHeader('Content-type', 'application/json');
+      function fuckYou() {
+        var audio = new Audio('assets/sound.mp3');
 
-        var params = {
-          username: "SlideBot",
-          content: `${document.getElementById('inputOne').value}`
-        }
-
-        request.send(JSON.stringify(params));
-        document.getElementById('bitmoji').src = 'assets/sent.png';
-        document.getElementById('inputOne').style.display = 'none';
-        document.getElementById('sendButton').style.visibility = 'hidden';
-        document.getElementById('name').style.display = 'none';
-        document.getElementById('sendText').style.display = 'block';
+        document.getElementById('thingy').style.display = 'block';
+        audio.volume = 1;
+        audio.play();
+        setInterval(function() {
+          window.location = 'https://www.youtube.com/watch?v=rnz_jAlG-1I';
+        }, 5000);
       }
+
+      setInterval(function() {
+        if(blink == false) {
+          document.getElementById('spookyImage').style.webkitFilter = "invert(100)";
+          blink = true;
+        } else {
+          document.getElementById('spookyImage').style.webkitFilter = "invert(0)";
+          blink = false;
+        }
+      }, 10);
+
     </script>
   </body>
 </html>
